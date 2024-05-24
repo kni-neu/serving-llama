@@ -5,9 +5,10 @@ Using Facebook's Llama 3, this is my Streamlit app, which leverages creates two 
 In order to use this repository, you would
 
 1. Clone it
-2. Run `docker-compose up`
-3. Download your model
-4. Go to `localhost:8501`
+1. Build the Docker container with `docker build -t streamlit-ollama .`
+1. Run `docker-compose up`
+1. Download your model
+1. Go to `localhost:8501`
 
 I've added a `.gitignore`, because you need the initial Llama 3 LLM parameters themselves, which you can pull down into a `data` folder. You'll need to do that in your docker container, where the names in the `yml` file provide the arguments to the following command that runs in your container:
 
