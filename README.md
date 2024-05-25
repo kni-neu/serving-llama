@@ -31,31 +31,6 @@ Ollama:
 
 Gemini actually provides a pretty good analogy: imagine your app as a race car. Ollama is the powerful car engine under the hood. Langchain is the cockpit / controls of that car (e.g., steering wheels, pedals, etc.)
 
-## Embeddings
-
-Ollama also has built in functions to obtain embeddings. After you've built your container (though alternatively, you can create a new Docker image), you can go into the container and set up Python3.
-
-```
-    1  ls
-    2  cd /root
-    3  apt update
-    4  apt-get install python3
-    5  apt install python3-pip
-    6  pip install ollama
-    7  pip install ipython
-```
-
-Inside the Python shell, you can then do something like this:
-
-```
-import ollama
-response = ollama.chat(model='llama3', messages = [ { 'role': 'user', 'content': "I'm testing the interface with Python. Hello?"},])
-print(response['message']['content'])
-
-embedding = ollama.embeddings(model= 'llama3', prompt= 'Can I get an embedding')
-print(embedding['embedding'])
-```
-
 
 ## References
 
