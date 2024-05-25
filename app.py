@@ -10,6 +10,7 @@ def sendPrompt(prompt):
     response = llm.invoke(prompt)
     return response
 
+st.set_page_config(page_title='My Little LLM', layout = 'wide', page_icon = 'https://media.licdn.com/dms/image/C5603AQFFBPEfIzXcgg/profile-displayphoto-shrink_200_200/0/1604552403158?e=2147483647&v=beta&t=mWcPkWfIc4XZ17UBffkKw8Q9D9P0RweCfhExkb_JQAM', initial_sidebar_state = 'auto')
 st.title("Karl's Little Chatbot")
 if "messages" not in st.session_state.keys(): 
     st.session_state.messages = [
