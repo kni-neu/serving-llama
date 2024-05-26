@@ -1,12 +1,14 @@
-FROM python:latest
+FROM ollama/ollama
 
-WORKDIR /app
+WORKDIR /root
 
 COPY requirements.txt ./
 
-RUN pip install --upgrade pip
+RUN apt update 
+RUN apt-get install -y python3 python3-pip vim git
 RUN pip install -r requirements.txt
 
 EXPOSE 8501
-ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+EXPOSE 11434
+ENTRYPOINT ["./entrypoint.sh"]
 

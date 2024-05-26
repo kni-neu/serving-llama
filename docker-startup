@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+  echo "Usage: ./docker-startup <build/deploy>"
+  exit 
+fi
+
+if [ "$1" = "build" ]; then
+  docker build -t llama3-rag .
+elif [ "$1" = "deploy" ]; then
+  docker run --rm --name llama-rag -v $PWD:/root -p 11434:11434 -p 8501:8501 -it llama3-rag 
+fi
