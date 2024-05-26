@@ -1,6 +1,6 @@
 # Streamlit LLM Chatbot with RAG (Llama 3)
 
-This is a Streamlit/Ollama LLM Application in a single container.
+This is a Streamlit/Ollama LLM Application in a single container. You can read more about it at [this blog post](https://medium.com/@karl.cs6220/serving-llama-3-locally-with-streamlit-dc23c4fa133f)
 
 ## How to Run
 
