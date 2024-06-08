@@ -8,6 +8,14 @@ This is a Streamlit/Ollama LLM Application in a single container. You can read m
 1. Run `./docker-startup build`
 1. Run `./docker-startup deploy`
 
+## How to Run with GPUs
+
+1. Procure GPU GCP machine with appropriate boot disk and image
+1. Clone this repository
+1. Run `./docker-startup build`
+1. Follow [instructions](https://hub.docker.com/r/ollama/ollama) to install with apt
+1. Run `./docker-startup deploy-gpu`
+
 ## References
 
 * [RAG with PDF upload](https://github.com/vndee/local-rag-example)
